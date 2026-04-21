@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Split Second | Emergency Response Simulation</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-glow" aria-hidden="true"></div>
+    <div class="app-shell">
+      <header class="masthead">
+        <div class="title-block">
+          <p class="eyebrow">Emergency Response Training Simulation</p>
+          <h1>Split Second</h1>
+          <p class="lede">
+            A roadside emergency where one rushed choice can worsen the
+            incident. Make the call, see the outcome.
+          </p>
+        </div>
+      </header>
+
+      <main class="experience-grid">
+        <section class="panel stage-panel">
+          <div class="stage-heading">
+            <div class="heading-left">
+              <span class="phase-chip" id="phaseLabel">Briefing</span>
+              <h2 id="sceneTitle">Train judgment under pressure.</h2>
+            </div>
+            <div class="risk-badge risk-badge--medium" id="riskBadge">
+              Simulation Ready
+            </div>
+          </div>
+
+          <div class="scene-frame">
+            <video
+              id="sceneVideo"
+              class="scene-video"
+              controls
+              playsinline
+              preload="metadata"
+              hidden
+            ></video>
+
+            <div class="scene-fallback" id="sceneFallback" data-scene="start">
+              <div class="signal-band" aria-hidden="true"></div>
+              <div class="scene-copy">
+                <span class="fallback-badge" id="fallbackBadge">
+                  Scenario preview
+                </span>
+                <p class="eyebrow" id="sceneKicker">Simulation briefing</p>
+                <h3 id="fallbackTitle">Train judgment, not just recall.</h3>
+                <p id="sceneDescription">
+                  Split Second places the learner in a roadside emergency where
+                  a single rushed choice can worsen the incident.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="scene-strip" role="status" aria-live="polite">
+            <div class="strip-item">
+              <span>Clock</span>
+              <strong id="clockText">T-00:45</strong>
+            </div>
+            <div class="strip-item">
+              <span>Objective</span>
+              <strong id="objectiveText">Assess the call before arrival.</strong>
+            </div>
+            <div class="strip-item">
+              <span>Selection</span>
+              <strong id="selectionText">No decision yet</strong>
+            </div>
+          </div>
+
+          <section class="narration-card">
+            <p class="eyebrow">Dispatch / Narration</p>
+            <p id="narrationText">
+              Dispatch reports a rollover with one trapped driver, visible
+              smoke, and an unstable roadside scene.
+            </p>
+          </section>
+
+          <section class="decision-zone" id="decisionZone" hidden>
+            <p class="eyebrow">Choose The First Move</p>
+            <div class="choice-grid" id="choiceGrid"></div>
+          </section>
+
+          <section class="debrief-zone" id="debriefZone" hidden>
+            <p class="eyebrow" id="debriefTone">Outcome Review</p>
+            <h3 id="debriefHeading">Why this branch matters</h3>
+            <p id="debriefSummary">
+              A fast response feels heroic, but uncontrolled hazards can turn
+              one victim into multiple victims.
+            </p>
+            <ul class="debrief-list" id="debriefList"></ul>
+          </section>
+
+          <div class="action-row">
+            <button class="primary-button" id="primaryAction" type="button">
+              Start Scenario
+            </button>
+            <button
+              class="secondary-button"
+              id="secondaryAction"
+              type="button"
+              hidden
+            >
+              Restart
+            </button>
+          </div>
+        </section>
+
+        <aside class="sidebar">
+          <section class="panel brief-panel">
+            <p class="eyebrow">Scenario Brief</p>
+            <h2>Highway Rollover With Fuel Leak</h2>
+            <p class="panel-copy">
+              Night dispatch. One driver trapped. Smoke at the engine bay. Fuel
+              is pooling near the shoulder while bystanders pressure responders
+              to move faster than the scene allows.
+            </p>
+            <p class="role-line">
+              <span>Role</span>
+              <strong>First Unit On Scene</strong>
+            </p>
+          </section>
+
+          <section class="panel flow-panel">
+            <p class="eyebrow">Response Flow</p>
+            <div class="timeline" id="timeline"></div>
+          </section>
+
+          <section class="panel notes-panel">
+            <p class="eyebrow">Operational Notes</p>
+            <p class="panel-copy" id="takeawayText">
+              Monitor scene hazards, keep bystanders under control, and avoid
+              turning one unstable incident into a larger emergency.
+            </p>
+          </section>
+        </aside>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
