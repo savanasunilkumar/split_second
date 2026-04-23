@@ -2,7 +2,7 @@
 
 Split Second is a browser-based emergency response simulation focused on decision-making under pressure. The experience places the learner at a nighttime highway rollover with a trapped driver, visible smoke, a fuel hazard, and a critical first-choice decision that changes the outcome of the scenario.
 
-Built as a single-page interactive experience, the project combines structured scene progression, branching video playback, and debrief feedback to show how early judgment affects responder safety and incident control.
+Built as an single-page interactive experience, the project combines structured scene progression, branching video playback, and debrief feedback to show how early judgment affects responder safety and incident control.
 
 ## Overview
 
